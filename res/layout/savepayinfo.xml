@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#000000"
+	    android:textStyle="bold"
+        android:text="保存花费信息" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+    >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/top_day"
+	        android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="花费内容" />
+
+        <borderText.BorderEditText
+            android:id="@+id/borderEditText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView2"
+            android:ems="10"
+            android:hint="请输入你的花费内容" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:background="@drawable/top_day"
+	        android:textStyle="bold"
+            android:text="金额" />
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/textView3"
+            android:hint="请输入你的花费金额" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_height="70dp"
+        android:layout_width="match_parent" >
+        <Button 
+            android:id="@+id/button1"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="#000000"
+            android:text="确定" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="50dp"
+            android:text="取消"
+            android:textColor="#000000" />
+
+    </RelativeLayout>  
+
+</LinearLayout>

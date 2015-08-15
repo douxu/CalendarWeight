@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_transparent" >
+
+    <borderText.BorderTextView
+        android:id="@+id/message"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/top_day"
+        android:clickable="true"
+        android:text="激励信息"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="90dp"
+        android:background="#ffeeeeee"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/popupwindow_calendar_last_month"
+                android:layout_width="70dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/popupwindow_calendar_month" >
+
+                <TextView
+                    android:layout_width="9dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bt_calendar_last" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/popupwindow_calendar_month"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="#aa564b4b"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/popupwindow_calendar_next_month"
+                android:layout_width="70dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/popupwindow_calendar_month" >
+
+                <TextView
+                    android:layout_width="9dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bt_calendar_next" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.fancyy.calendarweight.KCalendar
+            android:id="@+id/popupwindow_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="320dp" >
+        </com.fancyy.calendarweight.KCalendar>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bbcc3333" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/ll_popup"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ly1"
+            android:layout_width="500dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="338dp" >
+               
+            </ListView> 
+            <ImageView 
+                android:id="@+id/imageview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon"
+                android:visibility="gone"/>          
+         </LinearLayout> 
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="fill_parent"
+             android:layout_alignParentRight="true"
+             android:layout_toRightOf="@id/ly1"
+             android:orientation="vertical">
+
+             <Button
+                 android:id="@+id/bt1"
+                 android:layout_width="fill_parent"
+                 android:layout_height="250dp"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentRight="true"
+                 android:text="插入信息" />
+
+             <Button
+                 android:id="@+id/bt2"
+                 android:layout_width="fill_parent"
+                 android:layout_height="250dp"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_below="@id/bt1"
+                 android:text="查询详情" />
+                        
+         </LinearLayout> 
+                 
+     </LinearLayout>
+
+</RelativeLayout>
